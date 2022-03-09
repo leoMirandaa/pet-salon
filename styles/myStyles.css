@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+}
+/*
+body {
+  background: rgb(39, 39, 39);
+  color: #ffffff;
+} */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  border: solid 2px gainsboro
+}
