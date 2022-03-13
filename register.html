@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/6da635e2db.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/myStyles.css">
   <link rel="stylesheet" href="styles/formStyles.css">
   <title>The Fashion Pet</title>
@@ -30,36 +32,71 @@
     <h2>Register a new Pet</h2>
 
     <div class="main-container">
-      <div class="inputs-container">
-        <input type="text" id="txtPetName" placeholder="Enter pet's name">
-        <input type="number" id="txtPetAge" placeholder="Enter pet's age">
-        <input type="text" id="txtPetGender" placeholder="Enter pet's gender">
-        <input type="text" id="txtPetBreed" placeholder="Enter pet's Breed">
-        <input type="text" id="txtPetService" placeholder="Enter pet's Service">
-        <input type="text" id="txtPetOwnerName" placeholder="Enter pet's OwnerName">
-        <input type="text" id="txtPetContactPhone" placeholder="Enter pet's ContactPhone">
+      <div class="container inputs-container">
+        <div class="mb-3">
+          <input type="text" id="txtPetName" placeholder="Enter pet's name">
+        </div>
+        <div class="mb-3">
+          <input type="number" id="txtPetAge" placeholder="Enter pet's age">
+        </div>
+        <div class="mb-3">
+          <input type="text" id="txtPetGender" placeholder="Enter pet's gender">
+        </div>
+        <div class="mb-3">
+          <input type="text" id="txtPetBreed" placeholder="Enter pet's Breed">
+        </div>
+        <div class="mb-3">
+          <input type="text" id="txtPetService" placeholder="Enter pet's Service">
+        </div>
+        <div class="mb-3">
+          <input type="text" id="txtPetOwnerName" placeholder="Enter pet's OwnerName">
+        </div>
+        <div class="mb-3">
+          <input type="text" id="txtPetContactPhone" placeholder="Enter pet's ContactPhone">
+        </div>
         <!-- add the other pet information: breed, service, owners name, phone -->
 
-        <button class="btn-dog-lenght-container" onclick="register()">Add</button>
+        <button type="button" class="btn btn-primary" onclick="register()">Add</button>
       </div>
       <img src="imgs/dog-form.png" alt="">
     </div>
 
-    <div class="petSalon-pets">
-      <p id="pet-name"></p>
+    <h3 class="my-4 ml-4">Dogs Registered</h3>
+
+    <div>
+      <div id="total">
+        Total = 2
+      </div>
+      <div id="dogs">
+        🐶2
+
+      </div>
+      <div id="cats">
+        🐱0
+      </div>
+      <div id="others">
+        🐹0
+      </div>
+    </div>
+
+    <div class="pets container mb-3" id="pets">
+
+      <!-- </div> -->
+      <!-- <p id="pets"></p> -->
+      <!-- <p id="pet-name"></p>
       <p id="pet-age"></p>
       <p id="pet-gender"></p>
       <p id="pet-breed"></p>
       <p id="pet-service"></p>
       <p id="pet-ownerName"></p>
-      <p id="pet-contactPhone"></p>
+      <p id="pet-contactPhone"></p> -->
     </div>
   </main>
 
   <!-- <footer> &copy; Copyright 2022 Leopoldo Miranda - All Rights Reserved</footer> -->
 
   <script src="scripts/displayInfo.js"></script>
-  <script src="register.js"></script>
+  <script src="scripts/register.js"></script>
 </body>
 
 </html>
