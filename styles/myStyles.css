@@ -25,7 +25,7 @@ nav .icono {
   max-width: 200px;
   width: 100%;
   /* background-color: red; */
-  margin: 1rem;
+  margin: .3rem;
   padding: 1rem;
 }
 
@@ -47,7 +47,7 @@ nav .menu-container {
 .menu-container a {
   text-decoration: none;
   color: #706653;
-  margin: 1rem 3rem;
+  margin: .3rem 3rem;
   padding: 1rem;
   font-size: 18px;
   transition: .2s ease-in-out;
@@ -93,7 +93,7 @@ img {
 }
 
 .btn-dog-lenght-container {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   text-align: center;
 }
 
@@ -118,9 +118,9 @@ img {
 }
 
 footer {
-  background: #6D6027;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #D3CBB8, #8f803d);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #D3CBB8, #8f803d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #603813;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b2a794, #f0cba9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b2a794, #f0cba9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   bottom: 0;
   color: white;
@@ -128,4 +128,5 @@ background: linear-gradient(to right, #D3CBB8, #8f803d); /* W3C, IE 10+/ Edge, F
   padding: 5px 0px;
   position: absolute;
   width: 100%;
+  z-index: 9999;
 }

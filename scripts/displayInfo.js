@@ -24,11 +24,7 @@ const petSalon = {
 //create pets array
 
 
-
 //display the pet salon info in the footer section of html(name, address, working hours)
-
-
-
 function displaySalonInfo() {
   document.getElementById("footer-info").innerHTML =
     `
@@ -40,7 +36,6 @@ function displaySalonInfo() {
 
 
 // displaySalonInfo();
-
 function displayPetsInformation() {
 
   for (let i = 0; i < petSalon.pets.length; i++) {
@@ -55,9 +50,9 @@ function displayPetsInformation() {
 // displayPetsInformation()
 
 function displayDogLength() {
-  console.log(petSalon.pets.length);
+  alert("Pets registered: " + petSalon.pets.length)
+  // console.log(petSalon.pets.length);
 }
-
 
 
 //object constructor
@@ -78,8 +73,3 @@ let student2 = new StudentC("Von", "Abrea", 98, "von@gmail.com", true);
 function displayStudent(user) {
   return `Name: ${user.firstName} \n Email: ${user.email}`
 }
-
-// console.log(displayStudent(student1));
-// console.log(student1, student2);
-
-// console.log(`Student1: Last name: ${student1.lastName}, Email: ${student1.email} \n\nStudent2: Last name: ${student2.lastName}, Email: ${student2.email}`);
