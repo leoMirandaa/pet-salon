@@ -95,7 +95,7 @@ function displayPetsRegistered() {
       `
 
     // console.log('displayyy ', tmp);
-    document.getElementById("pets").innerHTML = tmp
+    // document.getElementById("pets").innerHTML = tmp
   }
 }
 
@@ -103,6 +103,7 @@ function displayPetsRegistered() {
 // showPetsRegistered()
 // console.log(petSalon.pets);
 function init() {
+  console.log("init");
   // create some pets
   let scooby = new Pet("Scooby", 50, "Male", "Boxer", "Grooming", "Shaggy", "1111-33-33")
   let scrappy = new Pet("Scrappy", 20, "Male", "Dalmata", "Grooming", "Shaggy", "2222-33-33")
