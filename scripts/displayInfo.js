@@ -15,14 +15,6 @@ const petSalon = {
   pets: []
 }
 
-// console.log(petSalon.address.zip);
-// console.log(petSalon.pets.length);
-//display the service in the console
-// console.log(petSalon.pets[2].service);
-
-
-//create pets array
-
 
 //display the pet salon info in the footer section of html(name, address, working hours)
 function displaySalonInfo() {
@@ -44,11 +36,9 @@ function displayPetsInformation() {
     ${i + 1} - ${petSalon.pets[i].name} ${petSalon.pets[i].age} ${petSalon.pets[i].gender} ${petSalon.pets[i].breed} ${petSalon.pets[i].service} ${petSalon.pets[i].ownerName} ${petSalon.pets[i].contactPhone} <br/>
     `
   }
-
 }
 
-// displayPetsInformation()
-
+displayPetsInformation()
 function displayDogLength() {
   alert("Pets registered: " + petSalon.pets.length)
   // console.log(petSalon.pets.length);
@@ -73,3 +63,16 @@ let student2 = new StudentC("Von", "Abrea", 98, "von@gmail.com", true);
 function displayStudent(user) {
   return `Name: ${user.firstName} \n Email: ${user.email}`
 }
+
+function showPetSalonInfo() {
+  document.getElementById("petSalonInfoContainer").innerHTML =
+    `
+    ${petSalon.name} <br>
+    Adress: ${petSalon.address.street} ${petSalon.address.number}
+    ${petSalon.address.zip} ${petSalon.address.city} ${petSalon.address.state}<br>
+    Working hours: ${petSalon.workingHours.open} - ${petSalon.workingHours.close}
+  `
+}
+
+showPetSalonInfo()
+

@@ -129,4 +129,12 @@ footer {
   position: absolute;
   width: 100%;
   z-index: 9999;
+  padding: 20px 10px;
 }
+
+
+/* .mainContainer {
+  height: 100%;
+  border: solid 3px red;
+  position: relative;
+} */

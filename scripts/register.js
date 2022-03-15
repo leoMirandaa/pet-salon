@@ -64,14 +64,6 @@ function register() {
     console.log(petSalon.pets);
     // alert("Pets registered: " + petSalon.pets.length)
 
-    // inputPetName.value = ""
-    // inputPetAge.value = ""
-    // inputPetGender.value = ""
-    // inputPetBreed.value = ""
-    // inputPetService.value = ""
-    // inputPetOwnerName.value = ""
-    // inputPetContactPhone.value = ""
-
     displayPetsRegistered()
   }
 }
@@ -94,8 +86,8 @@ function displayPetsRegistered() {
       </div>
       `
 
-    // console.log('displayyy ', tmp);
-    // document.getElementById("pets").innerHTML = tmp
+    console.log('displayyy ', tmp);
+    document.getElementById("pets").innerHTML = tmp
   }
 }
 
