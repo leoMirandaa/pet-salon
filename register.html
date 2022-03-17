@@ -10,79 +10,171 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/myStyles.css">
   <link rel="stylesheet" href="styles/formStyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- <link rel="stylesheet" href="css/animate.css"> -->
+
   <title>The Fashion Pet</title>
 </head>
 
 <body>
   <nav class="nav-container">
-    <i class="icono fas fa-dog">
-      <!-- <span>Fashion Pet</span> -->
-    </i>
+    <i class="icono fas fa-dog"></i>
+
     <div class="menu-container">
-      <a href="/index.html">Home</a>
-      <a>Breeds</a>
-      <a href="register.html">Register</a>
-      <a>Our Products</a>
+      <a class="btn-menu" href="/index.html">
+        <span></span>
+        <span></span>
+        Home
+      </a>
+
+      <a class="btn-menu">
+        <span></span>
+        <span></span>
+        Breeds
+      </a>
+
+      <a class="btn-menu" href="register.html">
+        <span></span>
+        <span></span>
+        Register
+      </a>
+
+      <a class="btn-menu">
+        <span></span>
+        <span></span>
+        About us
+      </a>
     </div>
   </nav>
 
-
-
   <main>
-    <h2>Register a new Pet</h2>
 
-    <div class="main-container">
-      <div class="container inputs-container">
+    <div class="main-container ">
+      <div class=" inputs-container">
+        <h3 class="">Register a new Pet</h3>
+
         <div class="mb-3">
           <input type="text" id="txtPetName" placeholder="Enter pet's name">
         </div>
+
+        <div class="mb-3">
+          <select name="petType" id="txtPetType" placeholder="Pet type">
+            <option value="" disabled selected hidden>Choose a pet type</option>
+            <option value="Bird">🐦Bird</option>
+            <option value="Cat">🐱Cat</option>
+            <option value="Dog">🐶Dog</option>
+            <option value="Rabbit">🐇Rabbit</option>
+          </select>
+        </div>
+
         <div class="mb-3">
           <input type="number" id="txtPetAge" placeholder="Enter pet's age">
         </div>
+
         <div class="mb-3">
-          <input type="text" id="txtPetGender" placeholder="Enter pet's gender">
+          <select name="services" id="txtPetGender">
+            <option value="" disabled selected hidden>Gender</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+          </select>
         </div>
+
         <div class="mb-3">
           <input type="text" id="txtPetBreed" placeholder="Enter pet's Breed">
         </div>
+
         <div class="mb-3">
-          <input type="text" id="txtPetService" placeholder="Enter pet's Service">
+          <select name="services" id="txtPetService">
+            <option value="" disabled selected hidden>Pet service</option>
+            <option value="Grooming">Grooming</option>
+            <option value="Pet hotel">Pet hotel</option>
+            <option value="Training">Training</option>
+            <option value="Veterinary">Veterinary</option>
+          </select>
+          <!-- <input type="text" id="txtPetService" placeholder="Enter pet's Service"> -->
         </div>
+
         <div class="mb-3">
           <input type="text" id="txtPetOwnerName" placeholder="Enter pet's OwnerName">
         </div>
+
         <div class="mb-3">
           <input type="text" id="txtPetContactPhone" placeholder="Enter pet's ContactPhone">
         </div>
+
         <!-- add the other pet information: breed, service, owners name, phone -->
-
-        <button type="button" class="btn btn-primary" onclick="register()">Add</button>
+        <button type="button" class="" onclick="register()">Add</button>
       </div>
-      <!-- <img src="imgs/dog-form.png" alt=""> -->
+      <img class="animate__animated animate__fadeInDown" src="imgs/dog-form.png" alt="">
     </div>
-
-    <h3 class="my-4 ml-4">Dogs Registered</h3>
-
-    <div>
-      <div id="total">
-        Total = 2
-      </div>
-      <div id="dogs">
-        🐶2
-
-      </div>
-      <div id="cats">
-        🐱0
-      </div>
-      <div id="others">
-        🐹0
-      </div>
-    </div>
-
-    <div class="pets container mb-3" id="pets"></div>
   </main>
 
-  <footer id="petSalonInfoContainer" style="display: none;"> &copy; Copyright 2022 Leopoldo Miranda - All Rights
+  <div class="pets-registered-container">
+    <h3 class="mt-4 ml-23">Pets Registered</h3>
+    <div class="main-pets-container ">
+      <div class="pets-container">
+        <div>
+          🐦<span id="birds"></span>
+        </div>
+
+        <div>
+          🐱<span id="cats"></span>
+        </div>
+
+        <div>
+          🐶<span id="dogs"></span>
+        </div>
+
+        <div>
+          🐇<span id="rabbit"></span>
+        </div>
+
+        <div id="total">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <div>
+        <input class="" id="txtSearch" type="search">
+        <button onclick="searchPet()">Search</button>
+      </div>
+
+      <div>
+        <button class="btn-table-desing" onclick="showTable()"><i class="fas fa-list"></i></button>
+        <button class="btn-table-desing" onclick="showCards()"><i class="fas fa-border-all"></i></button>
+      </div>
+    </div>
+
+    <div class="pets container mb-3 hide-cards" id="pets"></div>
+
+    <div class="table-pets-container wow bounceInUp " id="pets-table">
+      <table class="shadow my-4 table table-sm table-hover">
+        <thead class="table-light">
+          <tr>
+            <!-- <th scope="col"></th> -->
+            <th scope="col">Name</th>
+            <th scope="col">Pet type</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Breed</th>
+            <th scope="col">Service</th>
+            <th scope="col">Owner Name</th>
+            <th scope="col">Contact Phone</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="petsTableBody" id="pets">
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="wow slideInRight" id="petSalonInfoContainer"> &copy;
+    Copyright 2022 Leopoldo Miranda - All Rights
     Reserved</footer>
 
   <script src="scripts/displayInfo.js"></script>

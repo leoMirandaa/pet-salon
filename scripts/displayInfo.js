@@ -15,7 +15,6 @@ const petSalon = {
   pets: []
 }
 
-
 //display the pet salon info in the footer section of html(name, address, working hours)
 function displaySalonInfo() {
   document.getElementById("footer-info").innerHTML =
@@ -25,7 +24,6 @@ function displaySalonInfo() {
   Opens: ${petSalon.workingHours.open} - ${petSalon.workingHours.close}
   `
 }
-
 
 // displaySalonInfo();
 function displayPetsInformation() {
@@ -44,7 +42,6 @@ function displayDogLength() {
   // console.log(petSalon.pets.length);
 }
 
-
 //object constructor
 class StudentC {
   constructor(firstName, lastName, age, email, isActive) {
@@ -53,7 +50,6 @@ class StudentC {
     this.userAge = age;
     this.email = email;
     this.isActive = isActive;
-
   }
 }
 
